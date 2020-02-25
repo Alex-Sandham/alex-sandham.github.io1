@@ -13,26 +13,42 @@
       <h4 class="w3-xxxlarge w3-animate-bottom">All Unit CourseWork</h4>
   </div>
 </header>
-
-
-<!Week 1 PHP Tutorial>
 <div class="w3-row-padding w3-center w3-margin-top">
+
+<!Week 1 Mon PHP Tutorial>
 <div class="w3-third">
   <div class="w3-card w3-container w3-blue">
     <div class="w3-padding-32">
-      <button class="w3-btn w3-xlarge w3-dark-grey w3-hover-light-grey" onclick="document.getElementById('id_Unit27').style.display='block'" style="font-weight:900; overflow-wrap: break-word;">Unit 27 - 24/02/2020</button>
+      <button class="w3-btn w3-xlarge w3-dark-grey w3-hover-light-grey" onclick="document.getElementById('id_Unit27_W1D1').style.display='block'" style="font-weight:900; overflow-wrap: break-word;">Unit 27 - 24/02/2020</button>
     </div>
   </div>
 </div>
-<div id="id_Unit27" class="w3-modal">
+<div id="id_Unit27_W1D1" class="w3-modal">
     <div class="w3-modal-content w3-card-4 w3-animate-top">
       <header class="w3-container w3-theme-l1"> 
-        <span onclick="document.getElementById('id_Unit27').style.display='none'"
+        <span onclick="document.getElementById('id_Unit27_W1D1').style.display='none'"
         class="w3-button w3-display-topright">×</span>
-        <h2>PHP Intro</h2>
+        <h2>PHP Intro Part 1</h2>
       </header>
       <div class="w3-padding">
-        <p><a href="#">Download</a></p>
+        <p style="font-family: Consolas,monaco,monospace; text-align: left;"> 
+          <<nbps>?<nbps>p<nbps>h<nbps>p<br>
+          $name = "alex sandham";<br>
+          $randomnum = rand(0, 100);<br>
+          $sentence = "there are three teens in the tree";<br>
+          echo "My name is ".strtoupper("$name");<br>    
+          echo "My name is " .strlen("$name") ." characters long";<br>       
+          echo "10 + 6 = " .(10 + 16);<br>
+          echo "23 / 4 = " .(23/4);<br>
+          echo "13.5768 / 5.2 = " .round(13.5768/5.2);<br>
+          echo "13.5768 / 5.2 = " .round(13.5768/5.2 ,2);<br>
+          echo "A random number between 0 and 100: $randomnum";<br>
+          echo "It's Square Root is: " .sqrt($randomnum);<br>
+          echo "$sentence";<br>
+          echo count_chars($sentence, 3);<br>
+          echo ucwords($sentence);<br>
+        ?><br>
+      </p>
       </div>
       <footer class="w3-container w3-theme-l1">
         <p>24/02/2020</p>
@@ -40,6 +56,64 @@
     </div>
 </div>
 
+<!Week 1 Tue PHP Tutorial>
+<div class="w3-third">
+  <div class="w3-card w3-container w3-blue">
+    <div class="w3-padding-32">
+      <button class="w3-btn w3-xlarge w3-dark-grey w3-hover-light-grey" onclick="document.getElementById('id_Unit27_W1D2').style.display='block'" style="font-weight:900; overflow-wrap: break-word;">Unit 27 - 25/02/2020</button>
+    </div>
+  </div>
+</div>
+<div id="id_Unit27_W1D2" class="w3-modal">
+    <div class="w3-modal-content w3-card-4 w3-animate-top">
+      <header class="w3-container w3-theme-l1"> 
+        <span onclick="document.getElementById('id_Unit27_W1D2').style.display='none'"
+        class="w3-button w3-display-topright">×</span>
+        <h2>PHP Intro Part 2</h2>
+      </header>
+      <div class="w3-padding">
+        <p style="font-family: Consolas,monaco,monospace; text-align: left;"><<nbps>?<nbps>p<nbps>h<nbps>p<br>
+            $dean = "Dean";<br>
+            $stephen = "Stephen";<br>
+            $neil = "Neil";<br>
+            <br>
+            phpinfo(1);<br>
+            echo "Tomorrow I'll learn PHP global variables. This is a bad command : del c:\*.*";<br>
+            echo "PHP, an acronym for Hypertext Preprocessor, is a widely-used open source general-purpose scripting language. It is a cross-platform, HTML embedded server-side scripting language and is especially suited for web development.";<br>
+            echo "<<nbps>table><br>
+              <<nbsp>tr><br>
+                <<nbsp>th>Unit No.<<nbsp>/th><br>
+                <<nbsp>th>Unit Name<<nbsp>/th><br>
+                <<nbsp>th>Tutor<<nbsp>/th><br>
+              <<nbsp>/tr><br>
+              <<nbsp>tr><br>
+                <<nbsp>td>27<<nbsp>/td><br>
+                <<nbsp>td>Serverside Webscripting<<nbsp>/td><br>
+                <<nbsp>td>$dean<<nbsp>/td><br>
+              <<nbsp>/tr><br>
+              <<nbsp>tr><br>
+                <<nbsp>td>3<<nbsp>/td><br>
+                <<nbsp>td>Information Systems<<nbsp>/td><br>
+                <<nbsp>td>$stephen<<nbsp>/td><br>
+              <<nbsp>/tr><br>
+              <<nbsp>tr><br>
+                <<nbsp>td>14<<nbsp>/td><br>
+                <<nbsp>td>Event Driven Programming<<nbsp>/td><br>
+                <<nbsp>td>$neil<<nbsp>/td><br>
+              <<nbsp>/tr><br>
+            <<nbsp>/table>";<br>
+            echo strtoupper("hello world!");<br>
+            echo strtolower("HELLO WORLD!");<br>
+            echo ucfirst("hello world!");<br>
+            echo ucwords("hello world!");<br>
+
+?></p>
+      </div>
+      <footer class="w3-container w3-theme-l1">
+        <p>25/02/2020</p>
+      </footer>
+    </div>
+</div>
 
 </body>
 </html>
