@@ -1,0 +1,26 @@
+ <?php
+          $name = "alex sandham";
+          $randomnum = rand(0, 100);
+          $sentence = "there are three teens in the tree";
+          echo "My name is ".strtoupper("$name");
+          echo "<br>";       
+          echo "My name is " .strlen("$name") ." characters long";       
+          echo "<br>";
+          echo "10 + 6 = " .(10 + 16);
+          echo "<br>";
+          echo "23 / 4 = " .(23/4);
+          echo "<br>";
+          echo "13.5768 / 5.2 = " .round(13.5768/5.2);
+          echo "<br>";
+          echo "13.5768 / 5.2 = " .round(13.5768/5.2 ,2);
+          echo "<br>";
+          echo "A random number between 0 and 100: $randomnum";
+          echo "<br>";
+          echo "It's Square Root is: " .sqrt($randomnum);
+          echo "<br>";
+          echo "$sentence";
+          echo "<br>";
+          echo count_chars($sentence, 3);
+          echo "<br>";
+          echo ucwords($sentence);
+        ?>
