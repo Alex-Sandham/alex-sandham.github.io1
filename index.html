@@ -308,5 +308,38 @@
       </footer>
     </div>
 </div>
+<!Week 3 Mon Unit 27>
+<div class="w3-third w3-padding-16">
+  <div class="w3-card w3-container w3-blue">
+    <div class="w3-padding-32">
+      <button class="w3-btn w3-xlarge w3-dark-grey w3-hover-light-grey" onclick="document.getElementById('id_Unit27_W3D1').style.display='block'" style="font-weight:900; overflow-wrap: break-word;">Unit 27 - 09/03/2020</button>
+    </div>
+  </div>
+</div>
+<div id="id_Unit27_W3D1" class="w3-modal">
+    <div class="w3-modal-content w3-card-4 w3-animate-top">
+      <header class="w3-container w3-theme-l1"> 
+        <span onclick="document.getElementById('id_Unit27_W3D1').style.display='none'"
+        class="w3-button w3-display-topright">×</span>
+        <h2>Unit 27 Week 3</h2>
+      </header>
+      <div class="w3-padding">
+        <p style="text-align: left;">index.php<hr><p style="text-align: left;"><<nbsp>?<nbsp>p<nbsp>h<nbsp>p<br>
+              <<nbsp>form action="next.php" method="post">
+                    Name: <<nbsp>input type="text" name="name"><br>
+                    E-mail: <<nbsp>input type="text" name="email"><br>
+                    Student ID: <<nbsp>input type="text" name="studentid"><br>
+                    Course:<<nbsp>input type="text" name="course"><br>
+                    <<nbsp>input type="submit">
+              <<nbsp>/form><hr><p style="text-align: left;">next.php<br>Welcome <?php echo $_POST["name"]; ?><br>
+              Your email address is: <<nbsp>?<nbsp>p<nbsp>h<nbsp>p echo $_POST["email"]; ?><br>
+              Your Student ID is: <<nbsp>?<nbsp>p<nbsp>h<nbsp>p echo $_POST["studentid"]; ?><br>
+              Your Course is: <<nbsp>?<nbsp>p<nbsp>h<nbsp>p echo $_POST["course"]; ?><br>
+      </div>
+      <footer class="w3-container w3-theme-l1">
+        <p>09/03/2020</p>
+      </footer>
+    </div>
+</div>
 </body>
 </html>
