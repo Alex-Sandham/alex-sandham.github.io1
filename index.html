@@ -341,5 +341,92 @@
       </footer>
     </div>
 </div>
+<!Week 3 Mon Unit 27>
+<div class="w3-third w3-padding-16">
+  <div class="w3-card w3-container w3-blue">
+    <div class="w3-padding-32">
+      <button class="w3-btn w3-xlarge w3-dark-grey w3-hover-light-grey" onclick="document.getElementById('id_Unit27_W3D1-2').style.display='block'" style="font-weight:900; overflow-wrap: break-word;">Unit 27 - 09/03/2020</button>
+    </div>
+  </div>
+</div>
+<div id="id_Unit27_W3D1-2" class="w3-modal">
+    <div class="w3-modal-content w3-card-4 w3-animate-top">
+      <header class="w3-container w3-theme-l1"> 
+        <span onclick="document.getElementById('id_Unit27_W3D1-2').style.display='none'"
+        class="w3-button w3-display-topright">×</span>
+        <h2>Unit 27 Week 3</h2>
+      </header>
+      <div class="w3-padding">
+        <b style="text-align: left;">login.php</b><br><p style="text-align: left;"><<nbsp>?<nbsp>p<nbsp>h<nbsp>p<nbsp> session_start();<br>
+if(isset($_POST['Submit'])){<br>
+$<nbsp>logins = array('alex' => '123456','username1' => 'password1','username2' => 'password2');<br>
+$<nbsp>Username = isset($_POST['Username']) ? $_POST['Username'] : '';<br>
+$<nbsp>Password = isset($_POST['Password']) ? $_POST['Password'] : '';<br>
+if (isset($logins[$Username]) && $logins[$Username] == $Password){<br>
+$<nbsp>_SESSION['UserData']['Username']=$logins[$Username];<br>
+header("location:index.php");<br>
+exit;<br>
+} else {<br>
+$msg="<<nbsp>span style='color:red'>Invalid Login Details<<nbsp>/span>";<br>
+}<br>
+}<br>
+?><br>
+<<nbsp>html><br>
+<<nbsp>form action="" method="post" name="Login_Form"><br>
+  <<nbsp>table width="400" border="0" align="center" cellpadding="5" cellspacing="1" class="Table"><br>
+    <<nbsp>?<nbsp>p<nbsp>h<nbsp>p<nbsp> if(isset($msg)){?><br>
+    <<nbsp>tr><br>
+      <<nbsp>td colspan="2" align="center" valign="top"><<nbsp>?<nbsp>p<nbsp>h<nbsp>p<nbsp> echo $msg;?><<nbsp>/td><br>
+    <<nbsp>/tr><br>
+    <<nbsp>?<nbsp>p<nbsp>h<nbsp>p<nbsp> } ?><br>
+    <<nbsp>tr><br>
+      <<nbsp>td colspan="2" align="left" valign="top"><<nbsp>h3>Login<<nbsp>/h3><<nbsp>/td><br>
+    <<nbsp>/tr><br>
+    <<nbsp>tr><br>
+      <<nbsp>td align="right" valign="top">Username</<nbsp>td><br>
+      <<nbsp>td><<nbsp>input name="Username" type="text" class="Input"><<nbsp>/td><br>
+    <<nbsp>/tr><br>
+    <<nbsp>tr><br>
+      <<nbsp>td align="right">Password<<nbsp>/td><br>
+      <<nbsp>td><<nbsp>input name="Password" type="password" class="Input"><<nbsp>/td><br>
+    <<nbsp>/tr><br>
+    <<nbsp>tr><br>
+      <<nbsp>td> <<nbsp>/td><br>
+      <<nbsp>td><<nbsp>input name="Submit" type="submit" value="Login" class="Button3"><<nbsp>/td><br>
+    <<nbsp>/tr><br>
+  <<nbsp>/table><br>
+<<nbsp>/form><br>
+
+<<nbsp>/html><br>
+<hr><b style="text-align: left;">logout.php</b><br><p style="text-align: left;"><<nbsp>?<nbsp>p<nbsp>h<nbsp>p<nbsp><br>
+
+session_start();<br>
+
+session_destroy();<br>
+
+header("location:login.php");<br>
+
+exit;<br>
+
+?>
+
+<hr><b style="text-align: left;">index.php</b><br><p style="text-align: left;"><<nbsp>?<nbsp>p<nbsp>h<nbsp>p<nbsp> session_start();<br>
+if(!isset($_SESSION['UserData']['Username'])){<br>
+header("location:login.php");<br>
+exit;<br>
+}<br>
+?><br>
+
+Congratulations! You have logged into password protected page. <<nbsp>a href="logout.php">Click here<<nbsp>/a> to Logout.<br>
+
+
+
+      </div>
+      <footer class="w3-container w3-theme-l1">
+        <p>09/03/2020</p>
+      </footer>
+    </div>
+</div>
+
 </body>
 </html>
