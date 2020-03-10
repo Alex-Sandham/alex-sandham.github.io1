@@ -508,5 +508,136 @@ echo '<<nbsp> br>Your height is ' . htmlspecialchars($_GET["height"]) . '!';<br>
       </footer>
     </div>
 </div>
+<!Week 3 Tue Unit 27>
+<div class="w3-third w3-padding-16">
+  <div class="w3-card w3-container w3-blue">
+    <div class="w3-padding-32">
+      <button class="w3-btn w3-xlarge w3-dark-grey w3-hover-light-grey" onclick="document.getElementById('id_Unit27_W3D2-2').style.display='block'" style="font-weight:900; overflow-wrap: break-word;">Unit 27 - 10/03/2020</button>
+    </div>
+  </div>
+</div>
+<div id="id_Unit27_W3D2-2" class="w3-modal">
+    <div class="w3-modal-content w3-card-4 w3-animate-top">
+      <header class="w3-container w3-theme-l1"> 
+        <span onclick="document.getElementById('id_Unit27_W3D2-2').style.display='none'"
+        class="w3-button w3-display-topright">×</span>
+        <h2>Unit 27 Week 3</h2>
+      </header>
+      <div class="w3-padding">
+        <b style="text-align: left;">index.php</b><p style="text-align: left;">
+<<nbsp>?<nbsp>p<nbsp>h<nbsp>p<nbsp> session_start();<br>
+if(isset($_POST['Submit'])){<br>
+$logins = array('alex' => '123456','username1' => 'password1','username2' => 'password2');<br>
+$Username = isset($_POST['Username']) ? $_POST['Username'] : '';<br>
+$Password = isset($_POST['Password']) ? $_POST['Password'] : '';<br>
+if (isset($logins[$Username]) && $logins[$Username] == $Password){<br>
+$_SESSION['UserData']['Username']=$logins[$Username];<br>
+header("location:browser.php");<br>
+exit;<br>
+} else {<br>
+$msg="<<nbsp>span style='color:red'>Invalid Login Details<<nbsp>/span>";<br>
+}<br>
+}<br>
+?><br>
+<<nbsp>html><br>
+<<nbsp>form action="" method="post" name="Login_Form"><br>
+<<nbsp>table width="400" border="0" align="center" cellpadding="5" cellspacing="1" class="Table"><br>
+<nbsp><<nbsp>?<nbsp>p<nbsp>h<nbsp>p<nbsp> if(isset($msg)){?><br>
+<<nbsp>tr><br>
+<<nbsp>td colspan="2" align="center" valign="top"><<nbsp>/td><br>
+<<nbsp>/tr><br>
+<<nbsp>?<nbsp>p<nbsp>h<nbsp>p<nbsp> } ?><br>
+<<nbsp>tr><br>
+<<nbsp>td colspan="2" align="left" valign="top"><<nbsp>h3>Login<<nbsp>/h3><<nbsp>/td><br>
+<<nbsp>/tr><br>
+<<nbsp>tr><br>
+<<nbsp>td align="right" valign="top">Username<<nbsp>/td><br>
+<<nbsp>td><<nbsp>input name="Username" type="text" class="Input"><<nbsp>/td><br>
+<<nbsp>/tr><br>
+<<nbsp>tr><br>
+<<nbsp>td align="right">Password<<nbsp>/td><br>
+<nbsp><<nbsp>td><<nbsp>input name="Password" type="password" class="Input"><<nbsp>/td><br>
+<<nbsp>/tr><br>
+<<nbsp>tr><br>
+<<nbsp>td> <<nbsp>/td><br>
+<<nbsp>td><<nbsp>input name="Submit" type="submit" value="Login" class="Button3"><<nbsp>/td><br>
+<<nbsp>/tr><br>
+<<nbsp>/table><br>
+<<nbsp>/form><br>
+<<nbsp>/html><br>
+<hr>
+<b style="text-align: left;">browser.php</b><p style="text-align: left;">
+<<nbsp>!DOCTYPE html><br>
+<<nbsp>html><br>
+<<nbsp>body><br>
+
+<<nbsp>form action="upload.php" method="post" enctype="multipart/form-data"><br>
+    Select image to upload:<br>
+    <<nbsp>input type="file" name="fileToUpload" id="fileToUpload"><br>
+    <<nbsp>input type="submit" value="Upload Image" name="submit"><br>
+<<nbsp>/form><br>
+
+<<nbsp>/body><br>
+<<nbsp>/html><br>
+<hr>
+<b style="text-align: left;">upload.php</b><p style="text-align: left;">
+  <<nbsp>?<nbsp>p<nbsp>h<nbsp>p<nbsp><br>
+$target_dir = "uploads/";<br>
+$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);<br>
+$uploadOk = 1;<br>
+$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));<br>
+
+if(isset($_POST["submit"])) {<br>
+    $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);<br>
+    if($check !== false) {<br>
+        echo "File is an image - " . $check["mime"] . ".";<br>
+        $uploadOk = 1;<br>
+    } else {<br>
+        echo "File is not an image.";<br>
+        $uploadOk = 0;<br>
+    }<br>
+}<br>
+if (file_exists($target_file)) {<br>
+    echo "Sorry, file already exists.";<br>
+    $uploadOk = 0;<br>
+
+}<br>
+
+if ($_FILES["fileToUpload"]["size"] > 500000) {<br>
+    echo "Sorry, your file is too large.";<br>
+    $uploadOk = 0;<br>
+}<br>
+
+if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"<br>
+&& $imageFileType != "gif" ) {<br>
+    echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";<br>
+    $uploadOk = 0;<br>
+}<br>
+// Check if $uploadOk is set to 0 by an error<br>
+if ($uploadOk == 0) {<br>
+    echo "Sorry, your file was not uploaded.";<br>
+
+} else {<br>
+    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {<br>
+        echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";<br>
+    } else {<br>
+        echo "Sorry, there was an error uploading your file.";<br>
+    }<br>
+}<br>
+
+$dirname = "uploads/";<br>
+$images = glob($dirname."*.png");<br>
+
+foreach($images as $image) {<br>
+    echo '<<nbsp>img src="'.$image.'" /><<nbsp>br />';<br>
+}<br>
+?><br>
+</p>
+      </div>
+      <footer class="w3-container w3-theme-l1">
+        <p>10/03/2020</p>
+      </footer>
+    </div>
+</div>
 </body>
 </html>
