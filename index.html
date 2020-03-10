@@ -427,6 +427,86 @@ Congratulations! You have logged into password protected page. <<nbsp>a href="lo
       </footer>
     </div>
 </div>
+<!Week 3 Tue Unit 27>
+<div class="w3-third w3-padding-16">
+  <div class="w3-card w3-container w3-blue">
+    <div class="w3-padding-32">
+      <button class="w3-btn w3-xlarge w3-dark-grey w3-hover-light-grey" onclick="document.getElementById('id_Unit27_W3D2').style.display='block'" style="font-weight:900; overflow-wrap: break-word;">Unit 27 - 10/03/2020</button>
+    </div>
+  </div>
+</div>
+<div id="id_Unit27_W3D2" class="w3-modal">
+    <div class="w3-modal-content w3-card-4 w3-animate-top">
+      <header class="w3-container w3-theme-l1"> 
+        <span onclick="document.getElementById('id_Unit27_W3D2').style.display='none'"
+        class="w3-button w3-display-topright">×</span>
+        <h2>Unit 27 Week 3</h2>
+      </header>
+      <div class="w3-padding">
+        <p style="text-align: left;">
+<<nbsp>?<nbsp>p<nbsp>h<nbsp>p<nbsp> <br>    
+  $u_agent = $_SERVER['HTTP_USER_AGENT'];<br>
+  echo $u_agent . "<<nbsp>br />";<br>
 
+  function getBrowserinfo()<br>
+  {<br>
+    $u_agent = $_SERVER['HTTP_USER_AGENT'];<br>
+    $ub = "";<br>
+    
+    if (preg_match('/Chrome/i',$u_agent))<br>
+    {<br>
+      $ub = "Google Chrome";<br>
+    }<br>
+
+    return $ub;<br>
+  }<br>
+  
+  function getOperatingSysteminfo()<br>
+  {<br>
+    $u_agent = $_SERVER['HTTP_USER_AGENT'];<br>
+    $ub = "";<br>
+    if (preg_match('/Windows/i',$u_agent))<br>
+    {<br>
+      $ub = "Microsoft Windows";<br>
+    }<br>
+
+    return $ub;<br>
+  }<br>
+  echo "Your browser is " . getBrowserinfo() . ".<<nbsp>br>";<br>
+  echo "Your operating system is " . getOperatingSysteminfo() . ".<<nbsp>br>";<br>
+
+  $curr_page = $_SERVER['PHP_SELF'];<br>
+  echo "Your current page is " . $curr_page . ".<<nbsp>br>";<br>
+  $from_page = $_SERVER['HTTP_REFERER'];<br>
+  echo "You came to this page from " . $from_page . ".<<nbsp>br>";<br>
+  $ip = $_SERVER['REMOTE_ADDR'];<br>
+  echo "Your IP address is " . $ip . ".<<nbsp>br>";<br>
+
+  echo date("l jS \of F Y h:i:s A");<br>
+?><br>
+    
+
+<<nbsp>script language="javascript"><br>
+if (window.location.search == "") {<br>
+  window.location.href = window.location + "?width=" + screen.width +<br>
+  "&height=" + screen.height;<br>
+}<br>
+<<nbsp>/script><br>
+    
+<<nbsp>?<nbsp>p<nbsp>h<nbsp>p<nbsp><br>
+echo '<<nbsp> br>Your width is ' . htmlspecialchars($_GET["width"]) . '!';<br>
+echo '<<nbsp> br>Your height is ' . htmlspecialchars($_GET["height"]) . '!';<br>
+?><br>
+  <<nbsp>/div><br>
+
+
+
+
+      </div>
+      <footer class="w3-container w3-theme-l1">
+        <p>10/03/2020</p>
+      </footer>
+    </div>
+</div>
 </body>
 </html>
